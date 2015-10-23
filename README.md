@@ -9,7 +9,7 @@
 
 Promise Sequence Module.
 
-Terse and simple promise sequences for thouse who don't want to reinvent the wheel like i did :rocket: :whale: :boom:.
+Terse and simple promise sequences for those who don't want to reinvent the wheel like i did :rocket: :whale: :boom:.
 
 ## Install
 
