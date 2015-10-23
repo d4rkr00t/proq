@@ -7,22 +7,39 @@
 [![coveralls](https://img.shields.io/coveralls/d4rkr00t/proq.svg)](https://coveralls.io/github/d4rkr00t/proq)
 [![commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-Promise Sequence
+Promise Sequence Module.
 
-## Features
-// TODO
+Terse and simple promise sequences for thouse who don't want to reinvent the wheel like i did :rocket: :whale: :boom:.
 
 ## Install
 
 ```
-npm install proq
+npm i proq
+npm i --save proq // to put it into your package.json
 ```
 
 ## Usage
 
+```js
+import proq from 'proq';
+
+function magic1(params) {
+  // make some magic here ...
+  return new Promise(resolve => resolve(/* some result of our magic above */));
+}
+
+/* params is result of magic from magic1 */
+function magic2(params) {
+  // more magic here ...
+  return new Promise(resolve => resolve(/* some result of our magic2 */));
+}
+
+proq([magic1, magic2], { unicorns: 10 } /* initial params */)
+  .then(resultOfAllMagic => console.log(resultOfAllMagic));
+
 ```
-// TODO
-```
+
+Functions ```magic1``` and ```magic2``` will be called sequentially and result of each one will be passed to next one.
 
 ## Author
 
