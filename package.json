@@ -31,8 +31,7 @@
     "url": "https://github.com/d4rkr00t"
   },
   "pre-commit": [
-    "lint",
-    "test"
+    "validate"
   ],
   "dependencies": {},
   "devDependencies": {
